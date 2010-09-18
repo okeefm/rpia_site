@@ -1,4 +1,6 @@
 RpiaSite::Application.routes.draw do
+  get "sessions/new"
+
   get "users/new"
 
   match '/contact', :to => 'pages#contact'
