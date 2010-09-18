@@ -1,27 +1,32 @@
 <h1>Sign up</h1>
 
 <%= form_for(@user) do |f| %>
+  <%= render 'shared/error_messages' %>
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :name %> <br />
+    <%= f.text_field :name %> <br /> <br />
   </div>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= f.label :email %>  <br />
+    <%= f.text_field :email %> <br /> <br />
   </div>
   <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
+    <%= f.label :username %> <br />
+    <%= f.text_field :username %> <br /> <br />
+  </div>
+  <div class="address">
+    <%= f.label :address %> <br />
+    <%= f.text_field :address %>  <br /> <br />
   </div>
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
+    <%= f.label :password %> <br />
+    <%= f.password_field :password %> <br /> <br />
   </div>
   <div class="field">
-    <%= f.label :password_confirmation, "Confirmation" %><br />
-    <%= f.password_field :password_confirmation %>
+    <%= f.label :password_confirmation, "Confirmation" %> <br />
+    <%= f.password_field :password_confirmation %> <br /> <br />
   </div>
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Submit" %>
   </div>
 <% end %>
