@@ -9,4 +9,9 @@ module ApplicationHelper
       "#{base_title} | #{@title}"                     # String interpolation
     end
   end
+
+  def logo
+    image_tag("logo.jpg", :alt => "RPI Ambulance", :class => "round")
+  end
+
 end

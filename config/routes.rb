@@ -1,15 +1,14 @@
 RpiaSite::Application.routes.draw do
-  get "sessions/new"
-
-  get "users/new"
+  resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
 
   match '/contact', :to => 'pages#contact'
   match '/about', :to => 'pages#about'
   match '/signup', :to => 'users#new'
-  root :to => "pages#home"
-  
+  match '/signin', :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
 
-  resources :users
+  root :to => "pages#home"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
